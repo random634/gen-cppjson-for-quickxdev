@@ -296,7 +296,13 @@ def main():
 
     default_dict = {"cocosdir": COCOS_X_ROOT, "androidndkdir": NDK_ROOT}
 
-    json_ret = {}
+    json_all = []
+    if os.path.exists(args[1]):
+        fi = open(args[1], "r")
+        json_str = fi.read()
+        json_all = json.loads(json_str)
+        fi.close()
+
     for s in sections:
         # print("processing section %s" % s)
         target_namespace = config.get(s, "target_namespace", vars=default_dict)
@@ -320,28 +326,40 @@ def main():
         )
         generator.parse_header()
         json_data = generator.get_json_data()
-        json_ret.update(json_data)
 
-    if json_ret["name"]:
-        json_all = []
-        if os.path.exists(args[1]):
-            fi = open(args[1], "r")
-            json_str = fi.read()
-            json_all = json.loads(json_str)
-            fi.close()
+        def merge_namespace(namespace_to, namespace):
+            classes_to = namespace_to["classes"]
+            classes_to_dict = {clazz["name"]: clazz for clazz in classes_to}
+            classes = namespace["classes"]
+            for clazz in classes:
+                if clazz["name"] in classes_to_dict:
+                    clazz_to = classes_to_dict[clazz["name"]]
+                    functions_to = clazz_to["functions"]
+                    functions_to_dict = {
+                        func["name"] + "_" + "_".join(func["params"]): func
+                        for func in functions_to
+                    }
+                    functions = clazz["functions"]
+                    for func in functions:
+                        # function can overload
+                        func_name = func["name"] + "_" + "_".join(func["params"])
+                        if func_name not in functions_to_dict:
+                            functions_to.append(func)
+                else:
+                    classes_to.append(clazz)
 
         has_updated = False
         for namespace_obj in json_all:
-            if namespace_obj["name"] and namespace_obj["name"] == json_ret["name"]:
-                namespace_obj.update(json_ret)
+            if namespace_obj["name"] and namespace_obj["name"] == json_data["name"]:
+                merge_namespace(namespace_obj, json_data)
                 has_updated = True
                 break
         if not has_updated:
-            json_all.append(json_ret)
+            json_all.append(json_data)
 
-        fo = open(args[1], "w+")
-        fo.write(json.dumps(json_all, indent=2))
-        fo.close()
+    fo = open(args[1], "w+")
+    fo.write(json.dumps(json_all, indent=2))
+    fo.close()
 
 
 if __name__ == "__main__":

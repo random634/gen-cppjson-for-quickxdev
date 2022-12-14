@@ -26,7 +26,7 @@ CONFIG_FILES=(
 
 
 echo rm -f $OUTPUT_FILE
-# rm -f $OUTPUT_FILE
+rm -f $OUTPUT_FILE
 
 for config in ${CONFIG_FILES[@]}; do
     echo $PYTHON_BIN src/generator.py $config $OUTPUT_FILE
