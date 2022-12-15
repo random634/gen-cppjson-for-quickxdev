@@ -31,3 +31,15 @@ the cpp.json in  ~/.vscode/extensions/lonewolf.vscode-quickxdev-0.1.0/files is t
   ```
   pip3 install libclang
   ```
+
+### run
+
+* prepare the env of COCOS_X_ROOT and NDK_ROOT
+* config the generate.sh
+* exec the generate.sh
+
+### todos
+
+* [x] parse the enums
+* [ ] parse the function in namespace
+* [ ] parse the field in class
