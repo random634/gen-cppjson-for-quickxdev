@@ -20,8 +20,10 @@ CONFIG_FILES=(
     config.in/cocos2dx_physics.ini
     config.in/cocos2dx_spine.ini
     config.in/cocos2dx_navmesh.ini
-    # config.in/cocos2dx_audioengine.ini
     config.in/cocos2dx_backend.ini
+    config.in/ext_fairygui.ini
+
+    # config.in/cocos2dx_audioengine.ini
 )
 
 

@@ -264,10 +264,7 @@ class Generator(object):
                 if verbose:
                     print(class_name, method_name_reg, params, src, line, char)
             elif child.kind == clang.cindex.CursorKind.CXX_METHOD:
-                if (
-                    class_is_abstract
-                    or child.access_specifier != clang.cindex.AccessSpecifier.PUBLIC
-                ):
+                if child.access_specifier != clang.cindex.AccessSpecifier.PUBLIC:
                     continue
 
                 method_name = child.spelling
