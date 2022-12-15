@@ -31,7 +31,12 @@ class Generator(object):
         self.cocosx_dir = cocosx_dir.removesuffix("/")
         self.ndk_dir = ndk_dir.removesuffix("/")
 
-        self.json_data = {"name": self.target_namespace, "loc": None, "classes": []}
+        self.json_data = {
+            "name": self.target_namespace,
+            "loc": None,
+            "classes": [],
+            "enums": [],
+        }
 
         if skip_info:
             list_of_skips = re.split(",\n?", skip_info)
@@ -119,7 +124,10 @@ class Generator(object):
     def parse_node(
         self, node: clang.cindex.Cursor, parents: list = [], verbose: bool = False
     ):
-        if node.kind == clang.cindex.CursorKind.CLASS_DECL:
+        if node.kind == clang.cindex.CursorKind.ENUM_DECL:
+            if self.in_listed_classes(node.displayname):
+                self.parse_enum(node, parents, verbose)
+        elif node.kind == clang.cindex.CursorKind.CLASS_DECL:
             if self.in_listed_classes(node.displayname):
                 self.parse_class(node, parents, verbose)
         elif (
@@ -131,6 +139,61 @@ class Generator(object):
                 self.parse_node(child, parents, verbose)
             parents.pop()
 
+    def parse_enum(self, node: clang.cindex.Cursor, parents: list, verbose: bool):
+        enum_name = node.displayname
+        enum_name_reg = self.get_class_name_reg(enum_name)
+
+        enum_info = None
+        for enum in self.json_data["enums"]:
+            if enum["name"] == enum_name_reg:
+                enum_info = enum
+
+        if enum_info:
+            # already handled
+            return
+
+        child: clang.cindex.Cursor = None
+        for child in node.get_children():
+            if not enum_info:
+                location = node.location
+                src = location.file
+                line = location.line
+                char = location.column
+
+                enum_info = {
+                    "name": enum_name_reg,
+                    "loc": {
+                        "src": str(src).replace(self.cocosx_dir + "/", ""),
+                        "line": line,
+                        "char": char,
+                    },
+                    "fields": [],
+                }
+
+            if child.kind == clang.cindex.CursorKind.ENUM_CONSTANT_DECL:
+                location = child.location
+                src = location.file
+                line = location.line
+                char = location.column
+
+                field_info = {
+                    "name": child.spelling,
+                    "value": child.enum_value,
+                    "loc": {
+                        "src": str(src).replace(self.cocosx_dir + "/", ""),
+                        "line": line,
+                        "char": char,
+                    },
+                }
+
+                enum_info["fields"].append(field_info)
+
+                if verbose:
+                    print(enum_name, child.spelling, child.enum_value)
+
+        if enum_info:
+            self.json_data["enums"].append(enum_info)
+
     def parse_class(self, node: clang.cindex.Cursor, parents: list, verbose: bool):
         class_name = node.displayname
         class_name_reg = self.get_class_name_reg(class_name)
@@ -138,11 +201,13 @@ class Generator(object):
 
         class_info = None
         class_has_new = False
-        class_need_add = True
         for clazz in self.json_data["classes"]:
             if clazz["name"] == class_name_reg:
                 class_info = clazz
-                class_need_add = False
+
+        if class_info:
+            # already handled
+            return
 
         child: clang.cindex.Cursor = None
         for child in node.get_children():
@@ -164,15 +229,15 @@ class Generator(object):
 
             if child.kind == clang.cindex.CursorKind.CXX_BASE_SPECIFIER:
                 pass
-            elif child.kind == clang.cindex.CursorKind.FIELD_DECL:
-                pass
             elif child.kind == clang.cindex.CursorKind.CXX_ACCESS_SPEC_DECL:
+                pass
+            elif child.kind == clang.cindex.CursorKind.FIELD_DECL:
                 pass
             elif child.kind == clang.cindex.CursorKind.CONSTRUCTOR:
                 if (
                     class_is_abstract
-                    or class_has_new
                     or child.access_specifier != clang.cindex.AccessSpecifier.PUBLIC
+                    or class_has_new
                 ):
                     continue
 
@@ -199,38 +264,43 @@ class Generator(object):
                 if verbose:
                     print(class_name, method_name_reg, params, src, line, char)
             elif child.kind == clang.cindex.CursorKind.CXX_METHOD:
-                if child.access_specifier == clang.cindex.AccessSpecifier.PUBLIC:
-                    method_name = child.spelling
-                    if self.should_skip(class_name, method_name, verbose):
-                        continue
+                if (
+                    class_is_abstract
+                    or child.access_specifier != clang.cindex.AccessSpecifier.PUBLIC
+                ):
+                    continue
 
-                    method_name_reg = self.get_method_name_reg(class_name, method_name)
+                method_name = child.spelling
+                if self.should_skip(class_name, method_name, verbose):
+                    continue
 
-                    params = []
-                    for arg in child.get_arguments():
-                        params.append(arg.spelling)
+                method_name_reg = self.get_method_name_reg(class_name, method_name)
 
-                    location = child.location
-                    src = location.file
-                    line = location.line
-                    char = location.column
+                params = []
+                for arg in child.get_arguments():
+                    params.append(arg.spelling)
 
-                    function_info = {
-                        "name": method_name_reg,
-                        "params": params,
-                        "loc": {
-                            "src": str(src).replace(self.cocosx_dir + "/", ""),
-                            "line": line,
-                            "char": char,
-                        },
-                    }
+                location = child.location
+                src = location.file
+                line = location.line
+                char = location.column
 
-                    class_info["functions"].append(function_info)
+                function_info = {
+                    "name": method_name_reg,
+                    "params": params,
+                    "loc": {
+                        "src": str(src).replace(self.cocosx_dir + "/", ""),
+                        "line": line,
+                        "char": char,
+                    },
+                }
 
-                    if verbose:
-                        print(class_name, method_name, params, src, line, char)
+                class_info["functions"].append(function_info)
 
-        if class_need_add and class_info:
+                if verbose:
+                    print(class_name, method_name, params, src, line, char)
+
+        if class_info:
             self.json_data["classes"].append(class_info)
 
     def in_listed_classes(self, class_name: str) -> bool:
@@ -328,25 +398,49 @@ def main():
         json_data = generator.get_json_data()
 
         def merge_namespace(namespace_to, namespace):
-            classes_to = namespace_to["classes"]
-            classes_to_dict = {clazz["name"]: clazz for clazz in classes_to}
-            classes = namespace["classes"]
-            for clazz in classes:
-                if clazz["name"] in classes_to_dict:
-                    clazz_to = classes_to_dict[clazz["name"]]
-                    functions_to = clazz_to["functions"]
-                    functions_to_dict = {
-                        func["name"] + "_" + "_".join(func["params"]): func
-                        for func in functions_to
-                    }
-                    functions = clazz["functions"]
-                    for func in functions:
-                        # function can overload
-                        func_name = func["name"] + "_" + "_".join(func["params"])
-                        if func_name not in functions_to_dict:
-                            functions_to.append(func)
-                else:
-                    classes_to.append(clazz)
+            print("merge namespace: ", namespace_to["name"])
+            if True:
+                # merge classes
+                classes_to = namespace_to["classes"]
+                classes_to_dict = {clazz["name"]: clazz for clazz in classes_to}
+                classes = namespace["classes"]
+                for clazz in classes:
+                    if clazz["name"] in classes_to_dict:
+                        clazz_to = classes_to_dict[clazz["name"]]
+                        functions_to = clazz_to["functions"]
+                        functions_to_dict = {
+                            func["name"] + "_" + "_".join(func["params"]): func
+                            for func in functions_to
+                        }
+                        functions = clazz["functions"]
+                        for func in functions:
+                            # function can overload
+                            func_name = func["name"] + "_" + "_".join(func["params"])
+                            if func_name not in functions_to_dict:
+                                functions_to.append(func)
+                    else:
+                        classes_to.append(clazz)
+            if True:
+                # merge enums
+                enums_to = namespace_to["enums"]
+                enums_to_dict = {enum["name"]: enum for enum in enums_to}
+                enums = namespace["enums"]
+                for enum in enums:
+                    if enum["name"] in enums_to_dict:
+                        enum_to = enums_to_dict[enum["name"]]
+                        fields_to = enum_to["fields"]
+                        fields_to_dict = {
+                            field["name"] + "_" + field["value"]: func
+                            for field in fields_to
+                        }
+                        fields = enum["fields"]
+                        for field in fields:
+                            field_name = field["name"] + "_" + field["value"]
+                            if field_name not in fields_to_dict:
+                                fields_to.append(field)
+                                print(field)
+                    else:
+                        enums_to.append(enum)
 
         has_updated = False
         for namespace_obj in json_all:
