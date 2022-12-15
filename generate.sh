@@ -22,6 +22,7 @@ CONFIG_FILES=(
     config.in/cocos2dx_navmesh.ini
     config.in/cocos2dx_backend.ini
     config.in/ext_fairygui.ini
+    config.in/ext_dragonBones.ini
 
     # config.in/cocos2dx_audioengine.ini
 )

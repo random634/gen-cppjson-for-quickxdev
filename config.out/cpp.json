@@ -69098,5 +69098,950 @@
       }
     ],
     "enums": []
+  },
+  {
+    "name": "dragonBones",
+    "loc": null,
+    "classes": [
+      {
+        "name": "Armature",
+        "loc": {
+          "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+          "line": 50,
+          "char": 7
+        },
+        "functions": [
+          {
+            "name": "getTypeIndex",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 52,
+              "char": 5
+            }
+          },
+          {
+            "name": "getClassTypeIndex",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 52,
+              "char": 5
+            }
+          },
+          {
+            "name": "new",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 121,
+              "char": 5
+            }
+          },
+          {
+            "name": "_sortZOrder",
+            "params": [
+              "slotIndices",
+              "offset"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 144,
+              "char": 10
+            }
+          },
+          {
+            "name": "_addBone",
+            "params": [
+              "value"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 148,
+              "char": 10
+            }
+          },
+          {
+            "name": "_addSlot",
+            "params": [
+              "value"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 152,
+              "char": 10
+            }
+          },
+          {
+            "name": "_addConstraint",
+            "params": [
+              "value"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 156,
+              "char": 10
+            }
+          },
+          {
+            "name": "_bufferAction",
+            "params": [
+              "action",
+              "append"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 160,
+              "char": 10
+            }
+          },
+          {
+            "name": "dispose",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 183,
+              "char": 10
+            }
+          },
+          {
+            "name": "init",
+            "params": [
+              "armatureData",
+              "proxy",
+              "display",
+              "dragonBones"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 187,
+              "char": 10
+            }
+          },
+          {
+            "name": "advanceTime",
+            "params": [
+              "passedTime"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 191,
+              "char": 10
+            }
+          },
+          {
+            "name": "invalidUpdate",
+            "params": [
+              "boneName",
+              "updateSlot"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 210,
+              "char": 10
+            }
+          },
+          {
+            "name": "containsPoint",
+            "params": [
+              "x",
+              "y"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 229,
+              "char": 11
+            }
+          },
+          {
+            "name": "intersectsSegment",
+            "params": [
+              "xA",
+              "yA",
+              "xB",
+              "yB",
+              "intersectionPointA",
+              "intersectionPointB",
+              "normalRadians"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 260,
+              "char": 11
+            }
+          },
+          {
+            "name": "getBone",
+            "params": [
+              "name"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 280,
+              "char": 11
+            }
+          },
+          {
+            "name": "getBoneByDisplay",
+            "params": [
+              "display"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 295,
+              "char": 11
+            }
+          },
+          {
+            "name": "getSlot",
+            "params": [
+              "name"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 310,
+              "char": 11
+            }
+          },
+          {
+            "name": "getSlotByDisplay",
+            "params": [
+              "display"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 325,
+              "char": 11
+            }
+          },
+          {
+            "name": "getBones",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 338,
+              "char": 38
+            }
+          },
+          {
+            "name": "getSlots",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 354,
+              "char": 38
+            }
+          },
+          {
+            "name": "getFlipX",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 368,
+              "char": 10
+            }
+          },
+          {
+            "name": "setFlipX",
+            "params": [
+              "value"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 372,
+              "char": 10
+            }
+          },
+          {
+            "name": "getFlipY",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 388,
+              "char": 10
+            }
+          },
+          {
+            "name": "setFlipY",
+            "params": [
+              "value"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 392,
+              "char": 10
+            }
+          },
+          {
+            "name": "getCacheFrameRate",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 427,
+              "char": 21
+            }
+          },
+          {
+            "name": "setCacheFrameRate",
+            "params": [
+              "value"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 431,
+              "char": 10
+            }
+          },
+          {
+            "name": "getName",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 442,
+              "char": 31
+            }
+          },
+          {
+            "name": "getArmatureData",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 458,
+              "char": 32
+            }
+          },
+          {
+            "name": "getAnimation",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 474,
+              "char": 23
+            }
+          },
+          {
+            "name": "getProxy",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 481,
+              "char": 28
+            }
+          },
+          {
+            "name": "getEventDispatcher",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 495,
+              "char": 30
+            }
+          },
+          {
+            "name": "getDisplay",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 513,
+              "char": 18
+            }
+          },
+          {
+            "name": "getReplacedTexture",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 520,
+              "char": 18
+            }
+          },
+          {
+            "name": "setReplacedTexture",
+            "params": [
+              "value"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 524,
+              "char": 10
+            }
+          },
+          {
+            "name": "getClock",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 528,
+              "char": 24
+            }
+          },
+          {
+            "name": "setClock",
+            "params": [
+              "value"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 532,
+              "char": 10
+            }
+          },
+          {
+            "name": "getParent",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 545,
+              "char": 18
+            }
+          },
+          {
+            "name": "getAnimatable",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../armature/Armature.h",
+              "line": 551,
+              "char": 18
+            }
+          }
+        ]
+      },
+      {
+        "name": "AnimationState",
+        "loc": {
+          "src": "cocos/editor-support/dragonBones/animation/AnimationState.h",
+          "line": 44,
+          "char": 7
+        },
+        "functions": [
+          {
+            "name": "getTypeIndex",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/animation/AnimationState.h",
+              "line": 46,
+              "char": 5
+            }
+          },
+          {
+            "name": "getClassTypeIndex",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/animation/AnimationState.h",
+              "line": 46,
+              "char": 5
+            }
+          },
+          {
+            "name": "new",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/animation/AnimationState.h",
+              "line": 257,
+              "char": 5
+            }
+          },
+          {
+            "name": "init",
+            "params": [
+              "armature",
+              "animationData",
+              "animationConfig"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/animation/AnimationState.h",
+              "line": 280,
+              "char": 10
+            }
+          },
+          {
+            "name": "advanceTime",
+            "params": [
+              "passedTime",
+              "cacheFrameRate"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/animation/AnimationState.h",
+              "line": 284,
+              "char": 10
+            }
+          },
+          {
+            "name": "play",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/animation/AnimationState.h",
+              "line": 295,
+              "char": 10
+            }
+          },
+          {
+            "name": "stop",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/animation/AnimationState.h",
+              "line": 306,
+              "char": 10
+            }
+          },
+          {
+            "name": "fadeOut",
+            "params": [
+              "fadeOutTime",
+              "pausePlayhead"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/animation/AnimationState.h",
+              "line": 321,
+              "char": 10
+            }
+          },
+          {
+            "name": "containsBoneMask",
+            "params": [
+              "boneName"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/animation/AnimationState.h",
+              "line": 334,
+              "char": 10
+            }
+          },
+          {
+            "name": "addBoneMask",
+            "params": [
+              "boneName",
+              "recursive"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/animation/AnimationState.h",
+              "line": 349,
+              "char": 10
+            }
+          },
+          {
+            "name": "removeBoneMask",
+            "params": [
+              "boneName",
+              "recursive"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/animation/AnimationState.h",
+              "line": 364,
+              "char": 10
+            }
+          },
+          {
+            "name": "removeAllBoneMask",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/animation/AnimationState.h",
+              "line": 375,
+              "char": 10
+            }
+          },
+          {
+            "name": "isFadeIn",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/animation/AnimationState.h",
+              "line": 386,
+              "char": 17
+            }
+          },
+          {
+            "name": "isFadeOut",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/animation/AnimationState.h",
+              "line": 400,
+              "char": 17
+            }
+          },
+          {
+            "name": "isFadeComplete",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/animation/AnimationState.h",
+              "line": 414,
+              "char": 17
+            }
+          },
+          {
+            "name": "isPlaying",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/animation/AnimationState.h",
+              "line": 428,
+              "char": 10
+            }
+          },
+          {
+            "name": "isCompleted",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/animation/AnimationState.h",
+              "line": 439,
+              "char": 10
+            }
+          },
+          {
+            "name": "getCurrentPlayTimes",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/animation/AnimationState.h",
+              "line": 450,
+              "char": 14
+            }
+          },
+          {
+            "name": "getTotalTime",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/animation/AnimationState.h",
+              "line": 461,
+              "char": 18
+            }
+          },
+          {
+            "name": "getCurrentTime",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/animation/AnimationState.h",
+              "line": 475,
+              "char": 11
+            }
+          },
+          {
+            "name": "setCurrentTime",
+            "params": [
+              "value"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/animation/AnimationState.h",
+              "line": 476,
+              "char": 10
+            }
+          },
+          {
+            "name": "getName",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/animation/AnimationState.h",
+              "line": 477,
+              "char": 31
+            }
+          },
+          {
+            "name": "getAnimationData",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/animation/AnimationState.h",
+              "line": 494,
+              "char": 33
+            }
+          }
+        ]
+      },
+      {
+        "name": "Animation",
+        "loc": {
+          "src": "cocos/editor-support/dragonBones/factory/../animation/Animation.h",
+          "line": 43,
+          "char": 7
+        },
+        "functions": [
+          {
+            "name": "getTypeIndex",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../animation/Animation.h",
+              "line": 45,
+              "char": 5
+            }
+          },
+          {
+            "name": "getClassTypeIndex",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../animation/Animation.h",
+              "line": 45,
+              "char": 5
+            }
+          },
+          {
+            "name": "new",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../animation/Animation.h",
+              "line": 73,
+              "char": 5
+            }
+          },
+          {
+            "name": "init",
+            "params": [
+              "armature"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../animation/Animation.h",
+              "line": 93,
+              "char": 10
+            }
+          },
+          {
+            "name": "advanceTime",
+            "params": [
+              "passedTime"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../animation/Animation.h",
+              "line": 97,
+              "char": 10
+            }
+          },
+          {
+            "name": "reset",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../animation/Animation.h",
+              "line": 110,
+              "char": 10
+            }
+          },
+          {
+            "name": "stop",
+            "params": [
+              "animationName"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../animation/Animation.h",
+              "line": 125,
+              "char": 10
+            }
+          },
+          {
+            "name": "playConfig",
+            "params": [
+              "animationConfig"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../animation/Animation.h",
+              "line": 146,
+              "char": 21
+            }
+          },
+          {
+            "name": "play",
+            "params": [
+              "animationName",
+              "playTimes"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../animation/Animation.h",
+              "line": 173,
+              "char": 21
+            }
+          },
+          {
+            "name": "fadeIn",
+            "params": [
+              "animationName",
+              "fadeInTime",
+              "playTimes",
+              "layer",
+              "group",
+              "fadeOutMode"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../animation/Animation.h",
+              "line": 210,
+              "char": 21
+            }
+          },
+          {
+            "name": "gotoAndPlayByTime",
+            "params": [
+              "animationName",
+              "time",
+              "playTimes"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../animation/Animation.h",
+              "line": 232,
+              "char": 21
+            }
+          },
+          {
+            "name": "gotoAndPlayByFrame",
+            "params": [
+              "animationName",
+              "frame",
+              "playTimes"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../animation/Animation.h",
+              "line": 251,
+              "char": 21
+            }
+          },
+          {
+            "name": "gotoAndPlayByProgress",
+            "params": [
+              "animationName",
+              "progress",
+              "playTimes"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../animation/Animation.h",
+              "line": 270,
+              "char": 21
+            }
+          },
+          {
+            "name": "gotoAndStopByTime",
+            "params": [
+              "animationName",
+              "time"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../animation/Animation.h",
+              "line": 287,
+              "char": 21
+            }
+          },
+          {
+            "name": "gotoAndStopByFrame",
+            "params": [
+              "animationName",
+              "frame"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../animation/Animation.h",
+              "line": 304,
+              "char": 21
+            }
+          },
+          {
+            "name": "gotoAndStopByProgress",
+            "params": [
+              "animationName",
+              "progress"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../animation/Animation.h",
+              "line": 321,
+              "char": 21
+            }
+          },
+          {
+            "name": "getState",
+            "params": [
+              "animationName"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../animation/Animation.h",
+              "line": 348,
+              "char": 21
+            }
+          },
+          {
+            "name": "hasAnimation",
+            "params": [
+              "animationName"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../animation/Animation.h",
+              "line": 363,
+              "char": 10
+            }
+          },
+          {
+            "name": "getStates",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../animation/Animation.h",
+              "line": 374,
+              "char": 48
+            }
+          },
+          {
+            "name": "isPlaying",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../animation/Animation.h",
+              "line": 390,
+              "char": 10
+            }
+          },
+          {
+            "name": "isCompleted",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../animation/Animation.h",
+              "line": 403,
+              "char": 10
+            }
+          },
+          {
+            "name": "getLastAnimationName",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../animation/Animation.h",
+              "line": 416,
+              "char": 24
+            }
+          },
+          {
+            "name": "getAnimationNames",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../animation/Animation.h",
+              "line": 427,
+              "char": 44
+            }
+          },
+          {
+            "name": "getAnimations",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../animation/Animation.h",
+              "line": 441,
+              "char": 57
+            }
+          },
+          {
+            "name": "setAnimations",
+            "params": [
+              "value"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../animation/Animation.h",
+              "line": 445,
+              "char": 10
+            }
+          },
+          {
+            "name": "getAnimationConfig",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../animation/Animation.h",
+              "line": 458,
+              "char": 22
+            }
+          },
+          {
+            "name": "getLastAnimationState",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/dragonBones/factory/../animation/Animation.h",
+              "line": 471,
+              "char": 28
+            }
+          }
+        ]
+      }
+    ],
+    "enums": []
   }
 ]
