@@ -80,6 +80,17 @@
             }
           },
           {
+            "name": "addCommand",
+            "params": [
+              "cmd"
+            ],
+            "loc": {
+              "src": "cocos/base/CCConsole.h",
+              "line": 186,
+              "char": 10
+            }
+          },
+          {
             "name": "delCommand",
             "params": [
               "cmdName"
@@ -190,6 +201,18 @@
           "char": 14
         },
         "functions": [
+          {
+            "name": "create",
+            "params": [
+              "eventName",
+              "callback"
+            ],
+            "loc": {
+              "src": "cocos/base/CCEventListenerCustom.h",
+              "line": 69,
+              "char": 33
+            }
+          },
           {
             "name": "checkAvailable",
             "params": [],
@@ -442,6 +465,17 @@
               "src": "cocos/renderer/CCTexture2D.h",
               "line": 238,
               "char": 17
+            }
+          },
+          {
+            "name": "setTexParameters",
+            "params": [
+              "params"
+            ],
+            "loc": {
+              "src": "cocos/renderer/CCTexture2D.h",
+              "line": 241,
+              "char": 10
             }
           },
           {
@@ -1238,6 +1272,15 @@
             }
           },
           {
+            "name": "getPosition",
+            "params": [],
+            "loc": {
+              "src": "cocos/2d/CCNode.h",
+              "line": 356,
+              "char": 25
+            }
+          },
+          {
             "name": "getPositionNormalized",
             "params": [],
             "loc": {
@@ -1264,6 +1307,18 @@
             "loc": {
               "src": "cocos/2d/CCNode.h",
               "line": 382,
+              "char": 18
+            }
+          },
+          {
+            "name": "getPosition",
+            "params": [
+              "x",
+              "y"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCNode.h",
+              "line": 392,
               "char": 18
             }
           },
@@ -1388,6 +1443,17 @@
             }
           },
           {
+            "name": "setAnchorPoint",
+            "params": [
+              "anchorPoint"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCNode.h",
+              "line": 520,
+              "char": 18
+            }
+          },
+          {
             "name": "getAnchorPoint",
             "params": [],
             "loc": {
@@ -1403,6 +1469,17 @@
               "src": "cocos/2d/CCNode.h",
               "line": 537,
               "char": 25
+            }
+          },
+          {
+            "name": "setContentSize",
+            "params": [
+              "contentSize"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCNode.h",
+              "line": 548,
+              "char": 18
             }
           },
           {
@@ -1473,6 +1550,17 @@
             "loc": {
               "src": "cocos/2d/CCNode.h",
               "line": 611,
+              "char": 18
+            }
+          },
+          {
+            "name": "setRotationQuat",
+            "params": [
+              "quat"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCNode.h",
+              "line": 619,
               "char": 18
             }
           },
@@ -1605,6 +1693,18 @@
               "src": "cocos/2d/CCNode.h",
               "line": 777,
               "char": 19
+            }
+          },
+          {
+            "name": "enumerateChildren",
+            "params": [
+              "name",
+              "callback"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCNode.h",
+              "line": 814,
+              "char": 18
             }
           },
           {
@@ -2292,6 +2392,39 @@
             "loc": {
               "src": "cocos/2d/CCNode.h",
               "line": 1578,
+              "char": 10
+            }
+          },
+          {
+            "name": "setAdditionalTransform",
+            "params": [
+              "additionalTransform"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCNode.h",
+              "line": 1590,
+              "char": 10
+            }
+          },
+          {
+            "name": "setAdditionalTransform",
+            "params": [
+              "additionalTransform"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCNode.h",
+              "line": 1591,
+              "char": 10
+            }
+          },
+          {
+            "name": "setAdditionalTransform",
+            "params": [
+              "additionalTransform"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCNode.h",
+              "line": 1592,
               "char": 10
             }
           },
@@ -3216,6 +3349,15 @@
               "src": "cocos/platform/CCGLView.h",
               "line": 385,
               "char": 17
+            }
+          },
+          {
+            "name": "getAllTouches",
+            "params": [],
+            "loc": {
+              "src": "cocos/platform/CCGLView.h",
+              "line": 392,
+              "char": 25
             }
           },
           {
@@ -4991,6 +5133,20 @@
               "line": 152,
               "char": 5
             }
+          },
+          {
+            "name": "generatePolygon",
+            "params": [
+              "filename",
+              "rect",
+              "epsilon",
+              "threshold"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCAutoPolygon.h",
+              "line": 256,
+              "char": 24
+            }
           }
         ]
       },
@@ -5809,6 +5965,52 @@
         },
         "functions": [
           {
+            "name": "create",
+            "params": [
+              "action1"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCActionInterval.h",
+              "line": 135,
+              "char": 22
+            }
+          },
+          {
+            "name": "create",
+            "params": [
+              "arrayOfActions"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCActionInterval.h",
+              "line": 147,
+              "char": 22
+            }
+          },
+          {
+            "name": "createWithVariableList",
+            "params": [
+              "action1",
+              "args"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCActionInterval.h",
+              "line": 155,
+              "char": 22
+            }
+          },
+          {
+            "name": "createWithTwoActions",
+            "params": [
+              "actionOne",
+              "actionTwo"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCActionInterval.h",
+              "line": 162,
+              "char": 22
+            }
+          },
+          {
             "name": "clone",
             "params": [],
             "loc": {
@@ -6139,6 +6341,52 @@
           "char": 14
         },
         "functions": [
+          {
+            "name": "create",
+            "params": [
+              "action1"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCActionInterval.h",
+              "line": 346,
+              "char": 19
+            }
+          },
+          {
+            "name": "createWithVariableList",
+            "params": [
+              "action1",
+              "args"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCActionInterval.h",
+              "line": 355,
+              "char": 19
+            }
+          },
+          {
+            "name": "create",
+            "params": [
+              "arrayOfActions"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCActionInterval.h",
+              "line": 362,
+              "char": 19
+            }
+          },
+          {
+            "name": "createWithTwoActions",
+            "params": [
+              "action1",
+              "action2"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCActionInterval.h",
+              "line": 371,
+              "char": 19
+            }
+          },
           {
             "name": "clone",
             "params": [],
@@ -7010,6 +7258,18 @@
         },
         "functions": [
           {
+            "name": "create",
+            "params": [
+              "t",
+              "c"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCActionInterval.h",
+              "line": 939,
+              "char": 22
+            }
+          },
+          {
             "name": "clone",
             "params": [],
             "loc": {
@@ -7080,6 +7340,18 @@
           "char": 14
         },
         "functions": [
+          {
+            "name": "create",
+            "params": [
+              "t",
+              "c"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCActionInterval.h",
+              "line": 988,
+              "char": 22
+            }
+          },
           {
             "name": "startWithTarget",
             "params": [
@@ -8537,6 +8809,17 @@
         },
         "functions": [
           {
+            "name": "createNonRefCounted",
+            "params": [
+              "url"
+            ],
+            "loc": {
+              "src": "cocos/base/CCProperties.h",
+              "line": 189,
+              "char": 24
+            }
+          },
+          {
             "name": "getNextProperty",
             "params": [],
             "loc": {
@@ -9083,6 +9366,15 @@
             }
           },
           {
+            "name": "getInstance",
+            "params": [],
+            "loc": {
+              "src": "cocos/base/CCUserDefault.h",
+              "line": 220,
+              "char": 25
+            }
+          },
+          {
             "name": "destroyInstance",
             "params": [],
             "loc": {
@@ -9166,6 +9458,29 @@
             "loc": {
               "src": "cocos/platform/CCFileUtils.h",
               "line": 175,
+              "char": 10
+            }
+          },
+          {
+            "name": "getDataFromFile",
+            "params": [
+              "filename"
+            ],
+            "loc": {
+              "src": "cocos/platform/CCFileUtils.h",
+              "line": 181,
+              "char": 10
+            }
+          },
+          {
+            "name": "getDataFromFile",
+            "params": [
+              "filename",
+              "callback"
+            ],
+            "loc": {
+              "src": "cocos/platform/CCFileUtils.h",
+              "line": 191,
               "char": 10
             }
           },
@@ -10006,6 +10321,17 @@
         },
         "functions": [
           {
+            "name": "create",
+            "params": [
+              "callback"
+            ],
+            "loc": {
+              "src": "cocos/base/CCEventListenerAcceleration.h",
+              "line": 53,
+              "char": 39
+            }
+          },
+          {
             "name": "clone",
             "params": [],
             "loc": {
@@ -10054,6 +10380,15 @@
         },
         "functions": [
           {
+            "name": "create",
+            "params": [],
+            "loc": {
+              "src": "cocos/base/CCEventListenerFocus.h",
+              "line": 55,
+              "char": 32
+            }
+          },
+          {
             "name": "clone",
             "params": [],
             "loc": {
@@ -10099,6 +10434,15 @@
           "char": 14
         },
         "functions": [
+          {
+            "name": "create",
+            "params": [],
+            "loc": {
+              "src": "cocos/base/CCEventListenerKeyboard.h",
+              "line": 55,
+              "char": 35
+            }
+          },
           {
             "name": "clone",
             "params": [],
@@ -10308,6 +10652,15 @@
         },
         "functions": [
           {
+            "name": "create",
+            "params": [],
+            "loc": {
+              "src": "cocos/base/CCEventListenerMouse.h",
+              "line": 55,
+              "char": 32
+            }
+          },
+          {
             "name": "clone",
             "params": [],
             "loc": {
@@ -10354,6 +10707,15 @@
         },
         "functions": [
           {
+            "name": "create",
+            "params": [],
+            "loc": {
+              "src": "cocos/base/CCEventListenerController.h",
+              "line": 56,
+              "char": 34
+            }
+          },
+          {
             "name": "checkAvailable",
             "params": [],
             "loc": {
@@ -10370,15 +10732,6 @@
               "line": 60,
               "char": 38
             }
-          },
-          {
-            "name": "create",
-            "params": [],
-            "loc": {
-              "src": "cocos/base/CCEventListenerController.h",
-              "line": 56,
-              "char": 34
-            }
           }
         ]
       },
@@ -10390,6 +10743,15 @@
           "char": 14
         },
         "functions": [
+          {
+            "name": "create",
+            "params": [],
+            "loc": {
+              "src": "cocos/base/CCEventListenerTouch.h",
+              "line": 53,
+              "char": 40
+            }
+          },
           {
             "name": "setSwallowTouches",
             "params": [
@@ -10456,6 +10818,15 @@
           "char": 14
         },
         "functions": [
+          {
+            "name": "create",
+            "params": [],
+            "loc": {
+              "src": "cocos/base/CCEventListenerTouch.h",
+              "line": 110,
+              "char": 41
+            }
+          },
           {
             "name": "clone",
             "params": [],
@@ -10718,6 +11089,19 @@
             }
           },
           {
+            "name": "sphericalRadius",
+            "params": [
+              "r",
+              "zenith",
+              "azimuth"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCActionCamera.h",
+              "line": 143,
+              "char": 10
+            }
+          },
+          {
             "name": "clone",
             "params": [],
             "loc": {
@@ -10955,6 +11339,18 @@
         },
         "functions": [
           {
+            "name": "create",
+            "params": [
+              "dt",
+              "points"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCActionCatmullRom.h",
+              "line": 292,
+              "char": 26
+            }
+          },
+          {
             "name": "initWithDuration",
             "params": [
               "dt",
@@ -10994,6 +11390,18 @@
           "char": 14
         },
         "functions": [
+          {
+            "name": "create",
+            "params": [
+              "dt",
+              "points"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCActionCatmullRom.h",
+              "line": 325,
+              "char": 26
+            }
+          },
           {
             "name": "initWithDuration",
             "params": [
@@ -13747,6 +14155,17 @@
           "char": 14
         },
         "functions": [
+          {
+            "name": "create",
+            "params": [
+              "func"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCActionInstant.h",
+              "line": 336,
+              "char": 23
+            }
+          },
           {
             "name": "execute",
             "params": [],
@@ -16875,6 +17294,33 @@
             }
           },
           {
+            "name": "drawPoints",
+            "params": [
+              "position",
+              "numberOfPoints",
+              "color"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCDrawNode.h",
+              "line": 80,
+              "char": 10
+            }
+          },
+          {
+            "name": "drawPoints",
+            "params": [
+              "position",
+              "numberOfPoints",
+              "pointSize",
+              "color"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCDrawNode.h",
+              "line": 90,
+              "char": 10
+            }
+          },
+          {
             "name": "drawLine",
             "params": [
               "origin",
@@ -16897,6 +17343,20 @@
             "loc": {
               "src": "cocos/2d/CCDrawNode.h",
               "line": 108,
+              "char": 10
+            }
+          },
+          {
+            "name": "drawPoly",
+            "params": [
+              "poli",
+              "numberOfPoints",
+              "closePolygon",
+              "color"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCDrawNode.h",
+              "line": 118,
               "char": 10
             }
           },
@@ -16966,6 +17426,33 @@
             }
           },
           {
+            "name": "drawCardinalSpline",
+            "params": [
+              "config",
+              "tension",
+              "segments",
+              "color"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCDrawNode.h",
+              "line": 172,
+              "char": 10
+            }
+          },
+          {
+            "name": "drawCatmullRom",
+            "params": [
+              "points",
+              "segments",
+              "color"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCDrawNode.h",
+              "line": 180,
+              "char": 10
+            }
+          },
+          {
             "name": "drawDot",
             "params": [
               "pos",
@@ -17003,6 +17490,19 @@
             "loc": {
               "src": "cocos/2d/CCDrawNode.h",
               "line": 208,
+              "char": 10
+            }
+          },
+          {
+            "name": "drawSolidPoly",
+            "params": [
+              "poli",
+              "numberOfPoints",
+              "color"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCDrawNode.h",
+              "line": 217,
               "char": 10
             }
           },
@@ -17049,6 +17549,21 @@
             "loc": {
               "src": "cocos/2d/CCDrawNode.h",
               "line": 248,
+              "char": 10
+            }
+          },
+          {
+            "name": "drawPolygon",
+            "params": [
+              "verts",
+              "count",
+              "fillColor",
+              "borderWidth",
+              "borderColor"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCDrawNode.h",
+              "line": 263,
               "char": 10
             }
           },
@@ -17222,6 +17737,36 @@
             "loc": {
               "src": "cocos/2d/CCLabel.h",
               "line": 163,
+              "char": 19
+            }
+          },
+          {
+            "name": "createWithTTF",
+            "params": [
+              "text",
+              "fontFilePath",
+              "fontSize",
+              "dimensions",
+              "hAlignment",
+              "vAlignment"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCLabel.h",
+              "line": 179,
+              "char": 20
+            }
+          },
+          {
+            "name": "createWithTTF",
+            "params": [
+              "ttfConfig",
+              "text",
+              "hAlignment",
+              "maxLineWidth"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCLabel.h",
+              "line": 194,
               "char": 19
             }
           },
@@ -22124,6 +22669,49 @@
         },
         "functions": [
           {
+            "name": "create",
+            "params": [],
+            "loc": {
+              "src": "cocos/2d/CCSprite.h",
+              "line": 115,
+              "char": 20
+            }
+          },
+          {
+            "name": "create",
+            "params": [
+              "filename"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCSprite.h",
+              "line": 126,
+              "char": 20
+            }
+          },
+          {
+            "name": "create",
+            "params": [
+              "info"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCSprite.h",
+              "line": 137,
+              "char": 20
+            }
+          },
+          {
+            "name": "create",
+            "params": [
+              "filename",
+              "rect"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCSprite.h",
+              "line": 146,
+              "char": 20
+            }
+          },
+          {
             "name": "createWithTexture",
             "params": [
               "texture"
@@ -22785,6 +23373,17 @@
             }
           },
           {
+            "name": "setPolygonInfo",
+            "params": [
+              "info"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCSprite.h",
+              "line": 492,
+              "char": 10
+            }
+          },
+          {
             "name": "setStretchEnabled",
             "params": [
               "enabled"
@@ -22868,6 +23467,17 @@
             "loc": {
               "src": "cocos/2d/CCSprite.h",
               "line": 542,
+              "char": 18
+            }
+          },
+          {
+            "name": "initWithPolygon",
+            "params": [
+              "info"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCSprite.h",
+              "line": 553,
               "char": 18
             }
           },
@@ -23122,6 +23732,18 @@
               "src": "cocos/2d/CCRenderTexture.h",
               "line": 152,
               "char": 18
+            }
+          },
+          {
+            "name": "newImage",
+            "params": [
+              "imageCallback",
+              "flipImage"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCRenderTexture.h",
+              "line": 161,
+              "char": 10
             }
           },
           {
@@ -25130,6 +25752,54 @@
             "loc": {
               "src": "cocos/2d/CCCamera.h",
               "line": 163,
+              "char": 10
+            }
+          },
+          {
+            "name": "unproject",
+            "params": [
+              "src"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCCamera.h",
+              "line": 172,
+              "char": 10
+            }
+          },
+          {
+            "name": "unprojectGL",
+            "params": [
+              "src"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCCamera.h",
+              "line": 181,
+              "char": 10
+            }
+          },
+          {
+            "name": "unproject",
+            "params": [
+              "size",
+              "src",
+              "dst"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCCamera.h",
+              "line": 191,
+              "char": 10
+            }
+          },
+          {
+            "name": "unprojectGL",
+            "params": [
+              "size",
+              "src",
+              "dst"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCCamera.h",
+              "line": 201,
               "char": 10
             }
           },
@@ -27824,6 +28494,20 @@
             }
           },
           {
+            "name": "addImageAsync",
+            "params": [
+              "path",
+              "callback",
+              "callbackKey",
+              "pixelFormat"
+            ],
+            "loc": {
+              "src": "cocos/renderer/CCTextureCache.h",
+              "line": 97,
+              "char": 10
+            }
+          },
+          {
             "name": "unbindImageAsync",
             "params": [
               "filename"
@@ -28345,6 +29029,15 @@
               "src": "cocos/2d/CCSpriteBatchNode.h",
               "line": 98,
               "char": 10
+            }
+          },
+          {
+            "name": "getDescendants",
+            "params": [],
+            "loc": {
+              "src": "cocos/2d/CCSpriteBatchNode.h",
+              "line": 113,
+              "char": 33
             }
           },
           {
@@ -29684,6 +30377,18 @@
             }
           },
           {
+            "name": "getTileGIDAt",
+            "params": [
+              "tileCoordinate",
+              "flags"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCTMXLayer.h",
+              "line": 118,
+              "char": 11
+            }
+          },
+          {
             "name": "setTileGID",
             "params": [
               "gid",
@@ -29797,6 +30502,17 @@
             "loc": {
               "src": "cocos/2d/CCTMXLayer.h",
               "line": 189,
+              "char": 10
+            }
+          },
+          {
+            "name": "setTiles",
+            "params": [
+              "tiles"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCTMXLayer.h",
+              "line": 202,
               "char": 10
             }
           },
@@ -29934,6 +30650,17 @@
             "loc": {
               "src": "cocos/2d/CCTMXTiledMap.h",
               "line": 172,
+              "char": 11
+            }
+          },
+          {
+            "name": "getPropertiesForGID",
+            "params": [
+              "GID"
+            ],
+            "loc": {
+              "src": "cocos/2d/CCTMXTiledMap.h",
+              "line": 179,
               "char": 11
             }
           },
@@ -30727,6 +31454,33 @@
             }
           },
           {
+            "name": "createAsync",
+            "params": [
+              "modelPath",
+              "callback",
+              "callbackparam"
+            ],
+            "loc": {
+              "src": "cocos/3d/CCSprite3D.h",
+              "line": 79,
+              "char": 17
+            }
+          },
+          {
+            "name": "createAsync",
+            "params": [
+              "modelPath",
+              "texturePath",
+              "callback",
+              "callbackparam"
+            ],
+            "loc": {
+              "src": "cocos/3d/CCSprite3D.h",
+              "line": 81,
+              "char": 17
+            }
+          },
+          {
             "name": "setTexture",
             "params": [
               "texFile"
@@ -30857,6 +31611,24 @@
               "src": "cocos/3d/CCSprite3D.h",
               "line": 123,
               "char": 18
+            }
+          },
+          {
+            "name": "getAABB",
+            "params": [],
+            "loc": {
+              "src": "cocos/3d/CCSprite3D.h",
+              "line": 131,
+              "char": 17
+            }
+          },
+          {
+            "name": "getAABBRecursively",
+            "params": [],
+            "loc": {
+              "src": "cocos/3d/CCSprite3D.h",
+              "line": 139,
+              "char": 10
             }
           },
           {
@@ -31017,6 +31789,17 @@
               "src": "cocos/3d/CCSprite3D.h",
               "line": 227,
               "char": 10
+            }
+          },
+          {
+            "name": "getAABBRecursivelyImp",
+            "params": [
+              "node"
+            ],
+            "loc": {
+              "src": "cocos/3d/CCSprite3D.h",
+              "line": 242,
+              "char": 17
             }
           }
         ]
@@ -31404,6 +32187,15 @@
               "src": "extensions/Particle3D/CCParticleSystem3D.h",
               "line": 234,
               "char": 10
+            }
+          },
+          {
+            "name": "getParticlePool",
+            "params": [],
+            "loc": {
+              "src": "extensions/Particle3D/CCParticleSystem3D.h",
+              "line": 244,
+              "char": 25
             }
           },
           {
@@ -32095,6 +32887,17 @@
             }
           },
           {
+            "name": "getKeyStatus",
+            "params": [
+              "keyCode"
+            ],
+            "loc": {
+              "src": "cocos/base/CCController.h",
+              "line": 169,
+              "char": 22
+            }
+          },
+          {
             "name": "receiveExternalKeyEvent",
             "params": [
               "externalKeyCode",
@@ -32200,6 +33003,48 @@
             "loc": {
               "src": "cocos/physics3d/CCPhysics3DShape.h",
               "line": 100,
+              "char": 28
+            }
+          },
+          {
+            "name": "createMesh",
+            "params": [
+              "triangles",
+              "numTriangles"
+            ],
+            "loc": {
+              "src": "cocos/physics3d/CCPhysics3DShape.h",
+              "line": 107,
+              "char": 28
+            }
+          },
+          {
+            "name": "createHeightfield",
+            "params": [
+              "heightStickWidth",
+              "heightStickLength",
+              "heightfieldData",
+              "heightScale",
+              "minHeight",
+              "maxHeight",
+              "useFloatDatam",
+              "flipQuadEdges",
+              "useDiamondSubdivision"
+            ],
+            "loc": {
+              "src": "cocos/physics3d/CCPhysics3DShape.h",
+              "line": 118,
+              "char": 28
+            }
+          },
+          {
+            "name": "createCompoundShape",
+            "params": [
+              "shapes"
+            ],
+            "loc": {
+              "src": "cocos/physics3d/CCPhysics3DShape.h",
+              "line": 127,
               "char": 28
             }
           },
@@ -32336,6 +33181,17 @@
             }
           },
           {
+            "name": "setCollisionCallback",
+            "params": [
+              "func"
+            ],
+            "loc": {
+              "src": "cocos/physics3d/CCPhysics3DObject.h",
+              "line": 106,
+              "char": 10
+            }
+          },
+          {
             "name": "getCollisionCallback",
             "params": [],
             "loc": {
@@ -32383,6 +33239,17 @@
           "char": 14
         },
         "functions": [
+          {
+            "name": "create",
+            "params": [
+              "info"
+            ],
+            "loc": {
+              "src": "cocos/physics3d/CCPhysics3DObject.h",
+              "line": 176,
+              "char": 32
+            }
+          },
           {
             "name": "getRigidBody",
             "params": [],
@@ -32935,12 +33802,34 @@
         },
         "functions": [
           {
+            "name": "create",
+            "params": [],
+            "loc": {
+              "src": "cocos/physics3d/CCPhysics3DComponent.h",
+              "line": 61,
+              "char": 5
+            }
+          },
+          {
             "name": "init",
             "params": [],
             "loc": {
               "src": "cocos/physics3d/CCPhysics3DComponent.h",
               "line": 63,
               "char": 18
+            }
+          },
+          {
+            "name": "create",
+            "params": [
+              "physicsObj",
+              "translateInPhysics",
+              "rotInPhsyics"
+            ],
+            "loc": {
+              "src": "cocos/physics3d/CCPhysics3DComponent.h",
+              "line": 72,
+              "char": 32
             }
           },
           {
@@ -33060,6 +33949,34 @@
           "char": 14
         },
         "functions": [
+          {
+            "name": "create",
+            "params": [
+              "modelPath",
+              "rigidDes",
+              "translateInPhysics",
+              "rotInPhsyics"
+            ],
+            "loc": {
+              "src": "cocos/physics3d/CCPhysicsSprite3D.h",
+              "line": 52,
+              "char": 29
+            }
+          },
+          {
+            "name": "createWithCollider",
+            "params": [
+              "modelPath",
+              "colliderDes",
+              "translateInPhysics",
+              "rotInPhsyics"
+            ],
+            "loc": {
+              "src": "cocos/physics3d/CCPhysicsSprite3D.h",
+              "line": 55,
+              "char": 29
+            }
+          },
           {
             "name": "getPhysicsObj",
             "params": [],
@@ -33239,6 +34156,19 @@
             "loc": {
               "src": "cocos/physics3d/CCPhysics3DWorld.h",
               "line": 129,
+              "char": 10
+            }
+          },
+          {
+            "name": "rayCast",
+            "params": [
+              "startPos",
+              "endPos",
+              "result"
+            ],
+            "loc": {
+              "src": "cocos/physics3d/CCPhysics3DWorld.h",
+              "line": 140,
               "char": 10
             }
           },
@@ -34905,6 +35835,52 @@
             }
           },
           {
+            "name": "createNode",
+            "params": [
+              "filename"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/cocostudio/ActionTimeline/CSLoader.h",
+              "line": 81,
+              "char": 27
+            }
+          },
+          {
+            "name": "createNode",
+            "params": [
+              "filename",
+              "callback"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/cocostudio/ActionTimeline/CSLoader.h",
+              "line": 82,
+              "char": 27
+            }
+          },
+          {
+            "name": "createNode",
+            "params": [
+              "data"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/cocostudio/ActionTimeline/CSLoader.h",
+              "line": 83,
+              "char": 27
+            }
+          },
+          {
+            "name": "createNode",
+            "params": [
+              "data",
+              "callback"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/cocostudio/ActionTimeline/CSLoader.h",
+              "line": 84,
+              "char": 27
+            }
+          },
+          {
             "name": "createNodeWithVisibleSize",
             "params": [
               "filename"
@@ -34925,6 +35901,29 @@
               "src": "cocos/editor-support/cocostudio/ActionTimeline/CSLoader.h",
               "line": 86,
               "char": 27
+            }
+          },
+          {
+            "name": "createTimeline",
+            "params": [
+              "filename"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/cocostudio/ActionTimeline/CSLoader.h",
+              "line": 88,
+              "char": 50
+            }
+          },
+          {
+            "name": "createTimeline",
+            "params": [
+              "data",
+              "filename"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/cocostudio/ActionTimeline/CSLoader.h",
+              "line": 89,
+              "char": 50
             }
           },
           {
@@ -35046,6 +36045,218 @@
               "src": "cocos/editor-support/cocostudio/ActionTimeline/CSLoader.h",
               "line": 118,
               "char": 20
+            }
+          }
+        ]
+      },
+      {
+        "name": "AABB",
+        "loc": {
+          "src": "cocos/3d/CCAABB.h",
+          "line": 42,
+          "char": 14
+        },
+        "functions": [
+          {
+            "name": "new",
+            "params": [],
+            "loc": {
+              "src": "cocos/3d/CCAABB.h",
+              "line": 50,
+              "char": 5
+            }
+          },
+          {
+            "name": "getCenter",
+            "params": [],
+            "loc": {
+              "src": "cocos/3d/CCAABB.h",
+              "line": 61,
+              "char": 10
+            }
+          },
+          {
+            "name": "getCorners",
+            "params": [
+              "dst"
+            ],
+            "loc": {
+              "src": "cocos/3d/CCAABB.h",
+              "line": 75,
+              "char": 10
+            }
+          },
+          {
+            "name": "intersects",
+            "params": [
+              "aabb"
+            ],
+            "loc": {
+              "src": "cocos/3d/CCAABB.h",
+              "line": 80,
+              "char": 10
+            }
+          },
+          {
+            "name": "containPoint",
+            "params": [
+              "point"
+            ],
+            "loc": {
+              "src": "cocos/3d/CCAABB.h",
+              "line": 85,
+              "char": 10
+            }
+          },
+          {
+            "name": "merge",
+            "params": [
+              "box"
+            ],
+            "loc": {
+              "src": "cocos/3d/CCAABB.h",
+              "line": 91,
+              "char": 10
+            }
+          },
+          {
+            "name": "set",
+            "params": [
+              "min",
+              "max"
+            ],
+            "loc": {
+              "src": "cocos/3d/CCAABB.h",
+              "line": 96,
+              "char": 10
+            }
+          },
+          {
+            "name": "reset",
+            "params": [],
+            "loc": {
+              "src": "cocos/3d/CCAABB.h",
+              "line": 101,
+              "char": 10
+            }
+          },
+          {
+            "name": "isEmpty",
+            "params": [],
+            "loc": {
+              "src": "cocos/3d/CCAABB.h",
+              "line": 106,
+              "char": 10
+            }
+          },
+          {
+            "name": "updateMinMax",
+            "params": [
+              "point",
+              "num"
+            ],
+            "loc": {
+              "src": "cocos/3d/CCAABB.h",
+              "line": 111,
+              "char": 10
+            }
+          },
+          {
+            "name": "transform",
+            "params": [
+              "mat"
+            ],
+            "loc": {
+              "src": "cocos/3d/CCAABB.h",
+              "line": 116,
+              "char": 10
+            }
+          }
+        ]
+      },
+      {
+        "name": "OBB",
+        "loc": {
+          "src": "cocos/3d/CCOBB.h",
+          "line": 43,
+          "char": 14
+        },
+        "functions": [
+          {
+            "name": "new",
+            "params": [],
+            "loc": {
+              "src": "cocos/3d/CCOBB.h",
+              "line": 46,
+              "char": 5
+            }
+          },
+          {
+            "name": "containPoint",
+            "params": [
+              "point"
+            ],
+            "loc": {
+              "src": "cocos/3d/CCOBB.h",
+              "line": 65,
+              "char": 10
+            }
+          },
+          {
+            "name": "set",
+            "params": [
+              "center",
+              "_xAxis",
+              "_yAxis",
+              "_zAxis",
+              "_extents"
+            ],
+            "loc": {
+              "src": "cocos/3d/CCOBB.h",
+              "line": 70,
+              "char": 10
+            }
+          },
+          {
+            "name": "reset",
+            "params": [],
+            "loc": {
+              "src": "cocos/3d/CCOBB.h",
+              "line": 75,
+              "char": 10
+            }
+          },
+          {
+            "name": "getCorners",
+            "params": [
+              "verts"
+            ],
+            "loc": {
+              "src": "cocos/3d/CCOBB.h",
+              "line": 89,
+              "char": 10
+            }
+          },
+          {
+            "name": "intersects",
+            "params": [
+              "box"
+            ],
+            "loc": {
+              "src": "cocos/3d/CCOBB.h",
+              "line": 94,
+              "char": 10
+            }
+          },
+          {
+            "name": "transform",
+            "params": [
+              "mat"
+            ],
+            "loc": {
+              "src": "cocos/3d/CCOBB.h",
+              "line": 99,
+              "char": 10
             }
           }
         ]
@@ -35492,6 +36703,94 @@
         ]
       },
       {
+        "name": "Ray",
+        "loc": {
+          "src": "cocos/3d/CCRay.h",
+          "line": 45,
+          "char": 14
+        },
+        "functions": [
+          {
+            "name": "new",
+            "params": [],
+            "loc": {
+              "src": "cocos/3d/CCRay.h",
+              "line": 53,
+              "char": 5
+            }
+          },
+          {
+            "name": "intersects",
+            "params": [
+              "aabb",
+              "distance"
+            ],
+            "loc": {
+              "src": "cocos/3d/CCRay.h",
+              "line": 79,
+              "char": 10
+            }
+          },
+          {
+            "name": "intersects",
+            "params": [
+              "obb",
+              "distance"
+            ],
+            "loc": {
+              "src": "cocos/3d/CCRay.h",
+              "line": 84,
+              "char": 10
+            }
+          },
+          {
+            "name": "dist",
+            "params": [
+              "plane"
+            ],
+            "loc": {
+              "src": "cocos/3d/CCRay.h",
+              "line": 86,
+              "char": 11
+            }
+          },
+          {
+            "name": "intersects",
+            "params": [
+              "plane"
+            ],
+            "loc": {
+              "src": "cocos/3d/CCRay.h",
+              "line": 87,
+              "char": 10
+            }
+          },
+          {
+            "name": "set",
+            "params": [
+              "origin",
+              "direction"
+            ],
+            "loc": {
+              "src": "cocos/3d/CCRay.h",
+              "line": 95,
+              "char": 10
+            }
+          },
+          {
+            "name": "transform",
+            "params": [
+              "matrix"
+            ],
+            "loc": {
+              "src": "cocos/3d/CCRay.h",
+              "line": 102,
+              "char": 10
+            }
+          }
+        ]
+      },
+      {
         "name": "Skybox",
         "loc": {
           "src": "cocos/3d/CCSkybox.h",
@@ -35653,6 +36952,43 @@
             }
           },
           {
+            "name": "create",
+            "params": [
+              "parameter",
+              "fixedType"
+            ],
+            "loc": {
+              "src": "cocos/3d/CCTerrain.h",
+              "line": 334,
+              "char": 22
+            }
+          },
+          {
+            "name": "getHeight",
+            "params": [
+              "x",
+              "z",
+              "normal"
+            ],
+            "loc": {
+              "src": "cocos/3d/CCTerrain.h",
+              "line": 341,
+              "char": 11
+            }
+          },
+          {
+            "name": "getHeight",
+            "params": [
+              "pos",
+              "normal"
+            ],
+            "loc": {
+              "src": "cocos/3d/CCTerrain.h",
+              "line": 348,
+              "char": 11
+            }
+          },
+          {
             "name": "getNormal",
             "params": [
               "pixelX",
@@ -35745,6 +37081,29 @@
               "src": "cocos/3d/CCTerrain.h",
               "line": 378,
               "char": 18
+            }
+          },
+          {
+            "name": "getIntersectionPoint",
+            "params": [
+              "ray"
+            ],
+            "loc": {
+              "src": "cocos/3d/CCTerrain.h",
+              "line": 383,
+              "char": 10
+            }
+          },
+          {
+            "name": "getIntersectionPoint",
+            "params": [
+              "ray",
+              "intersectionPoint"
+            ],
+            "loc": {
+              "src": "cocos/3d/CCTerrain.h",
+              "line": 391,
+              "char": 10
             }
           },
           {
@@ -35974,6 +37333,17 @@
               "src": "cocos/3d/CCBundle3D.h",
               "line": 99,
               "char": 18
+            }
+          },
+          {
+            "name": "getTrianglesList",
+            "params": [
+              "path"
+            ],
+            "loc": {
+              "src": "cocos/3d/CCBundle3D.h",
+              "line": 105,
+              "char": 30
             }
           },
           {
@@ -36221,6 +37591,31 @@
             }
           },
           {
+            "name": "recenterPoints",
+            "params": [
+              "points",
+              "count",
+              "center"
+            ],
+            "loc": {
+              "src": "cocos/physics/CCPhysicsShape.h",
+              "line": 267,
+              "char": 17
+            }
+          },
+          {
+            "name": "getPolygonCenter",
+            "params": [
+              "points",
+              "count"
+            ],
+            "loc": {
+              "src": "cocos/physics/CCPhysicsShape.h",
+              "line": 276,
+              "char": 17
+            }
+          },
+          {
             "name": "setCategoryBitmask",
             "params": [
               "bitmask"
@@ -36385,6 +37780,48 @@
         },
         "functions": [
           {
+            "name": "create",
+            "params": [
+              "points",
+              "count",
+              "material",
+              "offset",
+              "radius"
+            ],
+            "loc": {
+              "src": "cocos/physics/CCPhysicsShape.h",
+              "line": 455,
+              "char": 33
+            }
+          },
+          {
+            "name": "calculateArea",
+            "params": [
+              "points",
+              "count"
+            ],
+            "loc": {
+              "src": "cocos/physics/CCPhysicsShape.h",
+              "line": 464,
+              "char": 18
+            }
+          },
+          {
+            "name": "calculateMoment",
+            "params": [
+              "mass",
+              "points",
+              "count",
+              "offset",
+              "radius"
+            ],
+            "loc": {
+              "src": "cocos/physics/CCPhysicsShape.h",
+              "line": 475,
+              "char": 18
+            }
+          },
+          {
             "name": "calculateDefaultMoment",
             "params": [],
             "loc": {
@@ -36401,6 +37838,17 @@
             "loc": {
               "src": "cocos/physics/CCPhysicsShape.h",
               "line": 490,
+              "char": 10
+            }
+          },
+          {
+            "name": "getPoints",
+            "params": [
+              "outPoints"
+            ],
+            "loc": {
+              "src": "cocos/physics/CCPhysicsShape.h",
+              "line": 497,
               "char": 10
             }
           },
@@ -36526,12 +37974,37 @@
         },
         "functions": [
           {
+            "name": "create",
+            "params": [
+              "points",
+              "count",
+              "material",
+              "border"
+            ],
+            "loc": {
+              "src": "cocos/physics/CCPhysicsShape.h",
+              "line": 618,
+              "char": 37
+            }
+          },
+          {
             "name": "getCenter",
             "params": [],
             "loc": {
               "src": "cocos/physics/CCPhysicsShape.h",
               "line": 625,
               "char": 18
+            }
+          },
+          {
+            "name": "getPoints",
+            "params": [
+              "outPoints"
+            ],
+            "loc": {
+              "src": "cocos/physics/CCPhysicsShape.h",
+              "line": 632,
+              "char": 10
             }
           },
           {
@@ -36587,12 +38060,37 @@
         },
         "functions": [
           {
+            "name": "create",
+            "params": [
+              "points",
+              "count",
+              "material",
+              "border"
+            ],
+            "loc": {
+              "src": "cocos/physics/CCPhysicsShape.h",
+              "line": 697,
+              "char": 35
+            }
+          },
+          {
             "name": "getCenter",
             "params": [],
             "loc": {
               "src": "cocos/physics/CCPhysicsShape.h",
               "line": 704,
               "char": 18
+            }
+          },
+          {
+            "name": "getPoints",
+            "params": [
+              "outPoints"
+            ],
+            "loc": {
+              "src": "cocos/physics/CCPhysicsShape.h",
+              "line": 711,
+              "char": 10
             }
           },
           {
@@ -36673,6 +38171,20 @@
             }
           },
           {
+            "name": "createPolygon",
+            "params": [
+              "points",
+              "count",
+              "material",
+              "offset"
+            ],
+            "loc": {
+              "src": "cocos/physics/CCPhysicsBody.h",
+              "line": 123,
+              "char": 25
+            }
+          },
+          {
             "name": "createEdgeSegment",
             "params": [
               "a",
@@ -36697,6 +38209,34 @@
             "loc": {
               "src": "cocos/physics/CCPhysicsBody.h",
               "line": 144,
+              "char": 25
+            }
+          },
+          {
+            "name": "createEdgePolygon",
+            "params": [
+              "points",
+              "count",
+              "material",
+              "border"
+            ],
+            "loc": {
+              "src": "cocos/physics/CCPhysicsBody.h",
+              "line": 155,
+              "char": 25
+            }
+          },
+          {
+            "name": "createEdgeChain",
+            "params": [
+              "points",
+              "count",
+              "material",
+              "border"
+            ],
+            "loc": {
+              "src": "cocos/physics/CCPhysicsBody.h",
+              "line": 166,
               "char": 25
             }
           },
@@ -36938,6 +38478,15 @@
               "src": "cocos/physics/CCPhysicsBody.h",
               "line": 289,
               "char": 19
+            }
+          },
+          {
+            "name": "getJoints",
+            "params": [],
+            "loc": {
+              "src": "cocos/physics/CCPhysicsBody.h",
+              "line": 292,
+              "char": 39
             }
           },
           {
@@ -38790,6 +40339,46 @@
             }
           },
           {
+            "name": "rayCast",
+            "params": [
+              "func",
+              "start",
+              "end",
+              "data"
+            ],
+            "loc": {
+              "src": "cocos/physics/CCPhysicsWorld.h",
+              "line": 170,
+              "char": 10
+            }
+          },
+          {
+            "name": "queryRect",
+            "params": [
+              "func",
+              "rect",
+              "data"
+            ],
+            "loc": {
+              "src": "cocos/physics/CCPhysicsWorld.h",
+              "line": 180,
+              "char": 10
+            }
+          },
+          {
+            "name": "queryPoint",
+            "params": [
+              "func",
+              "point",
+              "data"
+            ],
+            "loc": {
+              "src": "cocos/physics/CCPhysicsWorld.h",
+              "line": 190,
+              "char": 10
+            }
+          },
+          {
             "name": "getShapes",
             "params": [
               "point"
@@ -38829,6 +40418,15 @@
               "src": "cocos/physics/CCPhysicsWorld.h",
               "line": 224,
               "char": 18
+            }
+          },
+          {
+            "name": "getScene",
+            "params": [],
+            "loc": {
+              "src": "cocos/physics/CCPhysicsWorld.h",
+              "line": 232,
+              "char": 12
             }
           },
           {
@@ -39178,6 +40776,18 @@
             "loc": {
               "src": "cocos/navmesh/CCNavMeshAgent.h",
               "line": 142,
+              "char": 10
+            }
+          },
+          {
+            "name": "move",
+            "params": [
+              "destination",
+              "callback"
+            ],
+            "loc": {
+              "src": "cocos/navmesh/CCNavMeshAgent.h",
+              "line": 150,
               "char": 10
             }
           },
@@ -42420,6 +44030,17 @@
             }
           },
           {
+            "name": "setIgnoreMovementBoneData",
+            "params": [
+              "ignore"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/cocostudio/CCBone.h",
+              "line": 185,
+              "char": 18
+            }
+          },
+          {
             "name": "isIgnoreMovementBoneData",
             "params": [],
             "loc": {
@@ -42754,6 +44375,28 @@
               "src": "cocos/editor-support/cocostudio/CCArmatureAnimation.h",
               "line": 166,
               "char": 17
+            }
+          },
+          {
+            "name": "setMovementEventCallFunc",
+            "params": [
+              "listener"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/cocostudio/CCArmatureAnimation.h",
+              "line": 168,
+              "char": 10
+            }
+          },
+          {
+            "name": "setFrameEventCallFunc",
+            "params": [
+              "listener"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/cocostudio/CCArmatureAnimation.h",
+              "line": 169,
+              "char": 10
             }
           },
           {
@@ -44425,6 +46068,15 @@
           "char": 21
         },
         "functions": [
+          {
+            "name": "getInstance",
+            "params": [],
+            "loc": {
+              "src": "cocos/editor-support/cocostudio/ActionTimeline/CCActionTimelineCache.h",
+              "line": 66,
+              "char": 33
+            }
+          },
           {
             "name": "destroyInstance",
             "params": [],
@@ -46277,6 +47929,17 @@
             }
           },
           {
+            "name": "setFrameEventCallFunc",
+            "params": [
+              "listener"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/cocostudio/ActionTimeline/CCActionTimeline.h",
+              "line": 168,
+              "char": 10
+            }
+          },
+          {
             "name": "clearFrameEventCallFunc",
             "params": [],
             "loc": {
@@ -47320,6 +48983,17 @@
             }
           },
           {
+            "name": "addEventListener",
+            "params": [
+              "callback"
+            ],
+            "loc": {
+              "src": "cocos/ui/UIVideoPlayer.h",
+              "line": 211,
+              "char": 22
+            }
+          },
+          {
             "name": "onPlayEvent",
             "params": [
               "event"
@@ -47407,6 +49081,26 @@
               "src": "cocos/ui/UILayoutParameter.h",
               "line": 151,
               "char": 29
+            }
+          },
+          {
+            "name": "setMargin",
+            "params": [
+              "margin"
+            ],
+            "loc": {
+              "src": "cocos/ui/UILayoutParameter.h",
+              "line": 159,
+              "char": 10
+            }
+          },
+          {
+            "name": "getMargin",
+            "params": [],
+            "loc": {
+              "src": "cocos/ui/UILayoutParameter.h",
+              "line": 167,
+              "char": 19
             }
           },
           {
@@ -47778,6 +49472,28 @@
               "src": "cocos/ui/UIWidget.h",
               "line": 248,
               "char": 11
+            }
+          },
+          {
+            "name": "addTouchEventListener",
+            "params": [
+              "callback"
+            ],
+            "loc": {
+              "src": "cocos/ui/UIWidget.h",
+              "line": 259,
+              "char": 10
+            }
+          },
+          {
+            "name": "addClickEventListener",
+            "params": [
+              "callback"
+            ],
+            "loc": {
+              "src": "cocos/ui/UIWidget.h",
+              "line": 265,
+              "char": 10
             }
           },
           {
@@ -57547,6 +59263,39 @@
             }
           },
           {
+            "name": "setOnShouldStartLoading",
+            "params": [
+              "callback"
+            ],
+            "loc": {
+              "src": "cocos/ui/UIWebView/UIWebView.h",
+              "line": 154,
+              "char": 10
+            }
+          },
+          {
+            "name": "setOnDidFinishLoading",
+            "params": [
+              "callback"
+            ],
+            "loc": {
+              "src": "cocos/ui/UIWebView/UIWebView.h",
+              "line": 166,
+              "char": 10
+            }
+          },
+          {
+            "name": "setOnDidFailLoading",
+            "params": [
+              "callback"
+            ],
+            "loc": {
+              "src": "cocos/ui/UIWebView/UIWebView.h",
+              "line": 173,
+              "char": 10
+            }
+          },
+          {
             "name": "getOnJSCallback",
             "params": [],
             "loc": {
@@ -58082,6 +59831,18 @@
             }
           },
           {
+            "name": "createWithData",
+            "params": [
+              "skeletonData",
+              "ownsSkeletonData"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/spine/SkeletonAnimation.h",
+              "line": 54,
+              "char": 28
+            }
+          },
+          {
             "name": "createWithJsonFile",
             "params": [
               "skeletonJsonFile",
@@ -58155,6 +59916,19 @@
               "src": "cocos/editor-support/spine/SkeletonAnimation.h",
               "line": 76,
               "char": 7
+            }
+          },
+          {
+            "name": "setAnimation",
+            "params": [
+              "trackIndex",
+              "name",
+              "loop"
+            ],
+            "loc": {
+              "src": "cocos/editor-support/spine/SkeletonAnimation.h",
+              "line": 78,
+              "char": 14
             }
           },
           {
@@ -58648,6 +60422,41 @@
               "src": "cocos/renderer/backend/ProgramState.h",
               "line": 94,
               "char": 23
+            }
+          },
+          {
+            "name": "setUniform",
+            "params": [
+              "uniformLocation",
+              "data",
+              "size"
+            ],
+            "loc": {
+              "src": "cocos/renderer/backend/ProgramState.h",
+              "line": 102,
+              "char": 10
+            }
+          },
+          {
+            "name": "getUniformLocation",
+            "params": [
+              "uniform"
+            ],
+            "loc": {
+              "src": "cocos/renderer/backend/ProgramState.h",
+              "line": 110,
+              "char": 30
+            }
+          },
+          {
+            "name": "getUniformLocation",
+            "params": [
+              "name"
+            ],
+            "loc": {
+              "src": "cocos/renderer/backend/ProgramState.h",
+              "line": 118,
+              "char": 30
             }
           },
           {

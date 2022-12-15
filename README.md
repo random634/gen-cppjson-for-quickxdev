@@ -41,5 +41,6 @@ the cpp.json in  ~/.vscode/extensions/lonewolf.vscode-quickxdev-0.1.0/files is t
 ### todos
 
 * [x] parse the enums
+* [ ] parse template type, like ParticlePool
 * [ ] parse the function in namespace
 * [ ] parse the field in class
